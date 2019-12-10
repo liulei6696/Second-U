@@ -10,11 +10,17 @@ import SwiftUI
 
 struct SectorMainView: View {
     
-    private var active_sector = ["Life", "Game", "Politics", "Computer"]
-    private var sector_description = ["", "", "", ""]
-    
+    @ObservedObject var sectorManager = SectorManager()
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            List(sectorManager.all_sectors) { sector in
+                SectorEntranceRow(sector_name: sector.name, sector_description: sector.description)
+            }.navigationBarTitle("Sector")
+            }
+        .onAppear {
+            self.sectorManager.initAllSectors()
+        }
     }
 }
 

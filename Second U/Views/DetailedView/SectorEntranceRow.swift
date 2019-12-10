@@ -13,7 +13,6 @@ struct SectorEntranceRow: View {
     var sector_name: String
     var sector_description: String
     
-    private let overlay_padding: CGFloat = 30
     private let image_corner_radius: CGFloat = 30
     
     var body: some View {
@@ -28,16 +27,21 @@ struct SectorEntranceRow: View {
                 Spacer()
                 HStack {
                     Text(sector_name)
-                        .font(.system(.title))
+                        .font(Font.custom("Lobster-Regular", size: 40))
+                        .tracking(7)
+                        .foregroundColor(.white)
                     Spacer()
-                    }.padding(.horizontal, overlay_padding)
+                }.padding(.horizontal, 40)
                     .padding(.bottom, 10)
+                    .background(Color(UIColor(red:0.96, green:0.96, blue:0.96, alpha:0.2)))
                 HStack {
                     Text(sector_description)
                         .font(.system(.body))
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 40)
+                        .padding(.bottom, 10)
                     Spacer()
-                }.padding(.horizontal, 20)
-                    .padding(.bottom, 30)
+                }
             })
         
     }
@@ -46,6 +50,6 @@ struct SectorEntranceRow: View {
 struct SectorEntranceRow_Previews: PreviewProvider {
     static var previews: some View {
         SectorEntranceRow(sector_name: "Life", sector_description: "All about life")
-        //            .previewLayout(.sizeThatFits)
+            .previewLayout(.sizeThatFits)
     }
 }

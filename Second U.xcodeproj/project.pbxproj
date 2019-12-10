@@ -24,6 +24,10 @@
 		AB9BD17E239F0659003BCB41 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9BD17D239F0659003BCB41 /* TableRowView.swift */; };
 		AB9BD180239F17C7003BCB41 /* SectorEntranceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9BD17F239F17C7003BCB41 /* SectorEntranceRow.swift */; };
 		AB9BD182239FF591003BCB41 /* PlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9BD181239FF591003BCB41 /* PlaceHolderView.swift */; };
+		ABF9A41923A0337E008B9F8B /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABF9A41823A0337E008B9F8B /* LilitaOne-Regular.ttf */; };
+		ABF9A41B23A03422008B9F8B /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABF9A41A23A03422008B9F8B /* Lobster-Regular.ttf */; };
+		ABF9A41D23A037DF008B9F8B /* SectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9A41C23A037DF008B9F8B /* SectorManager.swift */; };
+		ABF9A41F23A03829008B9F8B /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9A41E23A03829008B9F8B /* Sector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		AB9BD17D239F0659003BCB41 /* TableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
 		AB9BD17F239F17C7003BCB41 /* SectorEntranceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorEntranceRow.swift; sourceTree = "<group>"; };
 		AB9BD181239FF591003BCB41 /* PlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderView.swift; sourceTree = "<group>"; };
+		ABF9A41823A0337E008B9F8B /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
+		ABF9A41A23A03422008B9F8B /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
+		ABF9A41C23A037DF008B9F8B /* SectorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorManager.swift; sourceTree = "<group>"; };
+		ABF9A41E23A03829008B9F8B /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +89,7 @@
 				AB9616FD239EE6FF003BDDE2 /* Controllers */,
 				AB7BF6D22395F1170087C312 /* Models */,
 				AB7BF6D02395F1060087C312 /* Views */,
-				AB7BF6CF2395F0C40087C312 /* Fonts */,
+				AB7BF6CF2395F0C40087C312 /* fonts */,
 				AB7BF6BB2395EEB80087C312 /* AppDelegate.swift */,
 				AB7BF6BD2395EEB80087C312 /* SceneDelegate.swift */,
 				AB7BF6BF2395EEB80087C312 /* ContentView.swift */,
@@ -102,11 +110,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AB7BF6CF2395F0C40087C312 /* Fonts */ = {
+		AB7BF6CF2395F0C40087C312 /* fonts */ = {
 			isa = PBXGroup;
 			children = (
+				ABF9A41A23A03422008B9F8B /* Lobster-Regular.ttf */,
+				ABF9A41823A0337E008B9F8B /* LilitaOne-Regular.ttf */,
 			);
-			path = Fonts;
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		AB7BF6D02395F1060087C312 /* Views */ = {
@@ -125,6 +135,8 @@
 				AB7BF6D32395F1410087C312 /* Message.swift */,
 				AB7BF6D52395F1EE0087C312 /* NetworkManager.swift */,
 				AB9616F8239EE0AF003BDDE2 /* Settings.swift */,
+				ABF9A41C23A037DF008B9F8B /* SectorManager.swift */,
+				ABF9A41E23A03829008B9F8B /* Sector.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,8 +219,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB7BF6C82395EEBB0087C312 /* LaunchScreen.storyboard in Resources */,
+				ABF9A41B23A03422008B9F8B /* Lobster-Regular.ttf in Resources */,
 				AB9616F7239EDFAF003BDDE2 /* Settings.plist in Resources */,
 				AB7BF6C52395EEBB0087C312 /* Preview Assets.xcassets in Resources */,
+				ABF9A41923A0337E008B9F8B /* LilitaOne-Regular.ttf in Resources */,
 				AB7BF6C22395EEBB0087C312 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,11 +239,13 @@
 				AB9BD180239F17C7003BCB41 /* SectorEntranceRow.swift in Sources */,
 				AB9616F5239EDB66003BDDE2 /* UserInfoView.swift in Sources */,
 				AB9616F9239EE0AF003BDDE2 /* Settings.swift in Sources */,
+				ABF9A41D23A037DF008B9F8B /* SectorManager.swift in Sources */,
 				AB9BD17E239F0659003BCB41 /* TableRowView.swift in Sources */,
 				AB9616FF239EE740003BDDE2 /* SettingsPropertyListReader.swift in Sources */,
 				AB7BF6D42395F1410087C312 /* Message.swift in Sources */,
 				AB9BD182239FF591003BCB41 /* PlaceHolderView.swift in Sources */,
 				AB7BF6D62395F1EE0087C312 /* NetworkManager.swift in Sources */,
+				ABF9A41F23A03829008B9F8B /* Sector.swift in Sources */,
 				AB7BF6BE2395EEB80087C312 /* SceneDelegate.swift in Sources */,
 				AB7BF6C02395EEB80087C312 /* ContentView.swift in Sources */,
 				AB9616F3239EDA94003BDDE2 /* SectorMainView.swift in Sources */,

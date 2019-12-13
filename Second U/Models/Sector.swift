@@ -10,7 +10,9 @@ import Foundation
 
 struct Sector: Identifiable {
     
-    let id: String
+    var id: String {
+        return name
+    }
     let name: String
     let description: String
     

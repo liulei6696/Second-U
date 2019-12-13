@@ -10,10 +10,12 @@ import Foundation
 
 class NetworkManager: ObservableObject {
     
-    @Published var messages = [Message]()
+    private var messages = [Message]()
+    
+    @Published var message_bulbs = [MessageBulb](repeating: MessageBulb(position: 8, content: "Hello", sender: "me"), count: 10)
     
     func fetchData() {
-        if let url = URL(string: "http://localhost:3000") {
+        if let url = URL(string: "http://localhost:3000/message") {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error == nil {
@@ -21,8 +23,15 @@ class NetworkManager: ObservableObject {
                     if let safeData = data {
                         do{
                             let results = try decoder.decode(Results.self, from: safeData)
-                            DispatchQueue.main.async {
-                                self.messages = results.messages
+                            self.messages = results.messages
+                            print("✅ got message")
+                            for message in self.messages {
+                                let msgb = message.toMessageBulb()
+                                sleep(1)
+                                print("✅ sleep in msg to msg_bulb")
+                                DispatchQueue.main.async {
+                                    self.message_bulbs[msgb.position] = msgb
+                                }
                             }
                         } catch {
                             print(error)

@@ -24,10 +24,13 @@
 		AB9BD17E239F0659003BCB41 /* TableRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9BD17D239F0659003BCB41 /* TableRowView.swift */; };
 		AB9BD180239F17C7003BCB41 /* SectorEntranceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9BD17F239F17C7003BCB41 /* SectorEntranceRow.swift */; };
 		AB9BD182239FF591003BCB41 /* PlaceHolderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB9BD181239FF591003BCB41 /* PlaceHolderView.swift */; };
+		ABCBB0A123A328ED0047929D /* MessageDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBB0A023A328ED0047929D /* MessageDispatcher.swift */; };
+		ABCBB0A323A33ECA0047929D /* MessageBulbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABCBB0A223A33ECA0047929D /* MessageBulbView.swift */; };
 		ABF9A41923A0337E008B9F8B /* LilitaOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABF9A41823A0337E008B9F8B /* LilitaOne-Regular.ttf */; };
 		ABF9A41B23A03422008B9F8B /* Lobster-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ABF9A41A23A03422008B9F8B /* Lobster-Regular.ttf */; };
 		ABF9A41D23A037DF008B9F8B /* SectorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9A41C23A037DF008B9F8B /* SectorManager.swift */; };
 		ABF9A41F23A03829008B9F8B /* Sector.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9A41E23A03829008B9F8B /* Sector.swift */; };
+		ABF9A42123A2CEA1008B9F8B /* MainChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF9A42023A2CEA1008B9F8B /* MainChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,10 +53,13 @@
 		AB9BD17D239F0659003BCB41 /* TableRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableRowView.swift; sourceTree = "<group>"; };
 		AB9BD17F239F17C7003BCB41 /* SectorEntranceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorEntranceRow.swift; sourceTree = "<group>"; };
 		AB9BD181239FF591003BCB41 /* PlaceHolderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderView.swift; sourceTree = "<group>"; };
+		ABCBB0A023A328ED0047929D /* MessageDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDispatcher.swift; sourceTree = "<group>"; };
+		ABCBB0A223A33ECA0047929D /* MessageBulbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBulbView.swift; sourceTree = "<group>"; };
 		ABF9A41823A0337E008B9F8B /* LilitaOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LilitaOne-Regular.ttf"; sourceTree = "<group>"; };
 		ABF9A41A23A03422008B9F8B /* Lobster-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lobster-Regular.ttf"; sourceTree = "<group>"; };
 		ABF9A41C23A037DF008B9F8B /* SectorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectorManager.swift; sourceTree = "<group>"; };
 		ABF9A41E23A03829008B9F8B /* Sector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sector.swift; sourceTree = "<group>"; };
+		ABF9A42023A2CEA1008B9F8B /* MainChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +143,7 @@
 				AB9616F8239EE0AF003BDDE2 /* Settings.swift */,
 				ABF9A41C23A037DF008B9F8B /* SectorManager.swift */,
 				ABF9A41E23A03829008B9F8B /* Sector.swift */,
+				ABCBB0A023A328ED0047929D /* MessageDispatcher.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -148,6 +155,8 @@
 				AB9BD17D239F0659003BCB41 /* TableRowView.swift */,
 				AB9BD17F239F17C7003BCB41 /* SectorEntranceRow.swift */,
 				AB9BD181239FF591003BCB41 /* PlaceHolderView.swift */,
+				ABF9A42023A2CEA1008B9F8B /* MainChatView.swift */,
+				ABCBB0A223A33ECA0047929D /* MessageBulbView.swift */,
 			);
 			path = DetailedView;
 			sourceTree = "<group>";
@@ -242,11 +251,14 @@
 				ABF9A41D23A037DF008B9F8B /* SectorManager.swift in Sources */,
 				AB9BD17E239F0659003BCB41 /* TableRowView.swift in Sources */,
 				AB9616FF239EE740003BDDE2 /* SettingsPropertyListReader.swift in Sources */,
+				ABCBB0A123A328ED0047929D /* MessageDispatcher.swift in Sources */,
+				ABCBB0A323A33ECA0047929D /* MessageBulbView.swift in Sources */,
 				AB7BF6D42395F1410087C312 /* Message.swift in Sources */,
 				AB9BD182239FF591003BCB41 /* PlaceHolderView.swift in Sources */,
 				AB7BF6D62395F1EE0087C312 /* NetworkManager.swift in Sources */,
 				ABF9A41F23A03829008B9F8B /* Sector.swift in Sources */,
 				AB7BF6BE2395EEB80087C312 /* SceneDelegate.swift in Sources */,
+				ABF9A42123A2CEA1008B9F8B /* MainChatView.swift in Sources */,
 				AB7BF6C02395EEB80087C312 /* ContentView.swift in Sources */,
 				AB9616F3239EDA94003BDDE2 /* SectorMainView.swift in Sources */,
 			);

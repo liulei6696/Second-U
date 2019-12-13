@@ -13,37 +13,46 @@ struct SectorEntranceRow: View {
     var sector_name: String
     var sector_description: String
     
+    @State var show_detail = false
+    
     private let image_corner_radius: CGFloat = 30
     
     var body: some View {
         
-        
-        Image(sector_name)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .cornerRadius(image_corner_radius)
-            .padding(.horizontal)
-            .overlay(VStack {
-                Spacer()
-                HStack {
-                    Text(sector_name)
-                        .font(Font.custom("Lobster-Regular", size: 40))
-                        .tracking(7)
-                        .foregroundColor(.white)
+        Button(action: {
+            if self.sector_name == "Life" {
+                self.show_detail.toggle()
+            }
+        }) {
+            Image(sector_name)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .cornerRadius(image_corner_radius)
+                .padding(.horizontal)
+                .overlay(VStack {
                     Spacer()
-                }.padding(.horizontal, 40)
-                    .padding(.bottom, 10)
-                    .background(Color(UIColor(red:0.96, green:0.96, blue:0.96, alpha:0.2)))
-                HStack {
-                    Text(sector_description)
-                        .font(.system(.body))
-                        .foregroundColor(.white)
-                        .padding(.horizontal, 40)
+                    HStack {
+                        Text(sector_name)
+                            .font(Font.custom("Lobster-Regular", size: 40))
+                            .tracking(7)
+                            .foregroundColor(.white)
+                        Spacer()
+                    }.padding(.horizontal, 40)
                         .padding(.bottom, 10)
-                    Spacer()
-                }
-            })
-        
+                        .background(Color(UIColor(red:0.96, green:0.96, blue:0.96, alpha:0.2)))
+                    HStack {
+                        Text(sector_description)
+                            .font(.system(.body))
+                            .foregroundColor(.white)
+                            .padding(.horizontal, 40)
+                            .padding(.bottom, 10)
+                        Spacer()
+                    }
+                })
+        }.buttonStyle(PlainButtonStyle())
+            .sheet(isPresented: $show_detail) {
+                MainChatView()
+        }
     }
 }
 

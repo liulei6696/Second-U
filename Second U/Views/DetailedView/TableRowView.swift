@@ -16,7 +16,7 @@ struct TableRowView: View {
     
     var body: some View {
         Rectangle()
-            .fill(Color.white)
+            .fill(Color.clear)
             .frame(height: 10)
             .overlay(
                 HStack {

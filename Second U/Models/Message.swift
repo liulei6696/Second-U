@@ -29,7 +29,7 @@ struct Message: Decodable, Identifiable {
         if distance > 1200 {
             return MessageBulb(position: Int.random(in: 1...6), content: content, sender: sender)
         }else {
-            return MessageBulb(position: Int.random(in: 7...9), content: content, sender: sender)
+            return MessageBulb(position: Int.random(in: 7...8), content: content, sender: sender)
         }
     }
 }

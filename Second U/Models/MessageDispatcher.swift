@@ -12,7 +12,7 @@ class MessageDispatcher: ObservableObject {
     
     private let networkManager = NetworkManager()
     
-    @Published var message_bulbs = [MessageBulb](repeating: MessageBulb(position: 8, content: "", sender: "me"), count: 10)
+    @Published var message_bulbs = [MessageBulb](repeating: MessageBulb(position: 8, content: "", sender: "me"), count: 9)
     
     func dispatch() {
         

@@ -12,7 +12,7 @@ class NetworkManager: ObservableObject {
     
     private var messages = [Message]()
     
-    @Published var message_bulbs = [MessageBulb](repeating: MessageBulb(position: 8, content: "Hello", sender: "me"), count: 10)
+    @Published var message_bulbs = [MessageBulb](repeating: MessageBulb(position: 8, content: "", sender: "me"), count: 9)
     
     func fetchData() {
         if let url = URL(string: "http://localhost:3000/message") {
@@ -28,7 +28,7 @@ class NetworkManager: ObservableObject {
                             for message in self.messages {
                                 let msgb = message.toMessageBulb()
                                 sleep(1)
-                                print("✅ sleep in msg to msg_bulb")
+//                                print("✅ sleep in msg to msg_bulb")
                                 DispatchQueue.main.async {
                                     self.message_bulbs[msgb.position] = msgb
                                 }
